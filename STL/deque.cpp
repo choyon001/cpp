@@ -3,15 +3,12 @@
 #include<deque>
 using namespace std;
 int main(){
-    deque<int> d;
-    d.push_back(2);
-    d.push_front(1);
-    for(int i:d){
-        cout<<i<<endl;
-    }
-    d.erase(d.begin(),d.begin()+2);
-    for(int i:d){
-        cout<<" Erase "<<i<<endl;
-    }
+    deque<int> dq;
+    dq.push_back(12);
+    dq.push_back(11);
+    dq.push_front(33);
+
+    for(int i:dq)cout<<" "<<i;
+   
     return 0;
 } 

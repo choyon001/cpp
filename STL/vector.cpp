@@ -1,5 +1,5 @@
 #include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 int main(){
     vector<int> v;
@@ -28,5 +28,6 @@ int main(){
         cout<<"erase "<<i;
     }
     cout<<"Size after erase : "<<v.size();
+
     return 0;
 }

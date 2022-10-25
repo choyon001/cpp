@@ -3,7 +3,8 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "array": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "tuple": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

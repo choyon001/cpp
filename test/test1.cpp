@@ -1,27 +1,17 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-#define optimize() ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0);
-#define endl '\n';
-#define Area(a,b) (a*b);
-#define ELE 1/2/3
-#define mini(a,b) ((a<b)?a:b)
+bool binarSearch(int *arr,int s,int e,int key){
+    int mid= (s+e)/2;
+    if(s>e)return false;
+    if(arr[mid]==key)return true;
+    if(arr[mid]>key)return binarSearch(arr,s,mid-1,key);
+    return binarSearch(arr,mid+1,e,key);
+}
 int main(){
-	optimize();
-	int c,d;
-	cin>>c>>d;
-	cout<<Area(c,d);
-	cout<<endl;
-	int arr[]={ELE};
-	cout<<arr[2]<<endl;
-	cout<<"minimum num: "<<mini(c,d);
-	cout<<endl;
-	int x = 55;
-	cout<<"x="<<x<<endl;
-	{
-		int x=33;
-		cout<<"inside scope : "<<x<<endl;
-	}
-	cout<<"outside scope : "<<x<<endl;
-	
-	return 0;
+    int arr[5]={2,5,6,8,9};
+    int size =5;
+    cout<<binarSearch(arr,0,4,0);
+    
+
+    return 0;
 }
