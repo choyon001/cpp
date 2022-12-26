@@ -1,22 +1,31 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
-int main(){
-    int tc;
-    cin>>tc;
-    for(int i = 0;i<tc;i++){
-        int n;
-        cin>>n;
-        string s;
-        char ch;
-        cin>>ch;
-        getline(cin,s);
-        s= ch+s;
-        int maxi = 0;
-        for(auto u:s){
-            maxi = max(maxi,u-'a');
-        }
-        cout<<maxi+1<<endl;
-    }
-
-    return 0;
+int main() {
+	int tc;
+	cin>>tc;
+	while(tc--){
+		int n;
+		cin>>n;
+		int arr[n][n];
+		for(int i=0;i<n;i++){
+			for(int j=0;j<n;j++){
+				int a;
+				cin>>a;
+				arr[i][j]=a;
+			}
+		}
+        int count=0;
+		for(int i=0;i<n;i++){
+			for(int j=0;j<n;j++){
+				for(int v=i;v<n;v++){
+					for(int k=j;k<n;k++){
+						if(arr[i][j]>arr[v][k]){
+							count++;
+						}
+					}
+				}
+			}
+		}
+		cout<<count<<endl;
+			}
 }
